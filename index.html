@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Mystical Fortune Teller</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="/Users/slowhike/Downloads/Crystal Fortune Teller Ball (1).jpg" alt="Magic Crystal Ball" class="banner-img">
+    <h1>Mystical Fortune Teller</h1>
+    <form name="fortuneTeller" id="fortuneTeller" action="fortune.html" method="GET">
+      <div class="form-group">
+        <label for="namefield">Full Name:</label>
+        <input type="text" id="namefield" name="name" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="birthdate">Birth Date:</label>
+        <input type="date" id="birthdate" name="birthdate" required>
+      </div>
+
+      <div class="form-group">
+        <label for="fav-color">Favorite Color (name or hex #):</label>
+        <input type="text" 
+               id="fav-color" 
+               name="color"
+               placeholder="e.g., 'blue' or '#0000ff'"
+               pattern="^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$|^[a-zA-Z]+$"
+               title="Enter a color name (like 'red') or hex code (like #ff0000)">
+      </div>
+
+      <div class="form-group">
+        <label for="lucky-number">Lucky Number (1-10):</label>
+        <input type="number" id="lucky-number" name="lucky" min="1" max="10">
+      </div>
+
+      <div class="form-group">
+        <label for="mood">Current Mood:</label>
+        <select id="mood" name="mood">
+          <option value="happy">😊 Happy</option>
+          <option value="neutral">😐 Neutral</option>
+          <option value="curious">🤔 Curious</option>
+          <option value="anxious">😟 Anxious</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="secret-message">Secret Message:</label>
+        <textarea id="secret-message" name="message" rows="3" placeholder="Write your deepest wish..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="confidence">Confidence Level:</label>
+        <input type="range" id="confidence" name="confidence" min="0" max="100">
+      </div>
+
+      <input type="submit" value="Reveal My Fortune!">
+    </form>
+  </body>
+</html>
